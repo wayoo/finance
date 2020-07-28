@@ -2,11 +2,34 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/list">List</router-link> |
+      <router-link to="/charlie">Charlie Munger</router-link>
     </div>
-    <router-view/>
+    <template v-if="!isLoading">
+      <router-view/>
+    </template>
   </div>
 </template>
+
+<script>
+import { mapActions } from 'vuex';
+
+export default {
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
+  methods: {
+    ...mapActions(['asyncUpdateCurrency']),
+  },
+  created() {
+    this.asyncUpdateCurrency().then(() => {
+      this.isLoading = false;
+    });
+  },
+};
+</script>
 
 <style lang="less">
 #app {
