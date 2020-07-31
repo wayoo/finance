@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/list">List</router-link> |
-      <router-link to="/charlie">Charlie Munger</router-link>
+      <router-link to="/charlie">Charlie Munger</router-link> |
+      <router-link to="/charlie/reading">Reading List</router-link>
     </div>
     <template v-if="!isLoading">
       <router-view/>

@@ -1,14 +1,21 @@
 <template>
-  <div class="page-charlie">
+  <div class="page page-charlie">
     <h2>Investment Evaluation Process</h2>
+    <div>
+      <tag type="border" color="primary">self-discipline</tag>
+      <tag type="border" color="primary">patience</tag>
+      <tag type="border" color="primary">calm</tag>
+      <tag type="border" color="primary">independence</tag>
+    </div>
     <div>
       Hard work is an essential element in tracking down
       and perfecting a strategy or in executing it.
     </div>
     <div>
       The habit of committing far more time to learning and thinnking than to doing is no accident.
+      <br>
       It is the blend of discipline and patience exhibited by true masters of a craft:
-      an uncompromising commitment to "properly playing the hand."
+      an uncompromising (不妥协的) commitment to "properly playing the hand."
     </div>
     <div class="indicator">
       <Steps :current="current">
@@ -164,6 +171,26 @@
             </tag>
           </div>
         </Panel>
+
+        <Panel name="5">
+          PS: Great business model
+          <div slot="content">
+            His reading materials provide some guidance.
+            <br>
+            a focus on the aforementioned issue of "competitive destruction" and
+            an examination of why some entities are nevertheless able to adapt,
+            survive, and even dominate over time.
+            <br>
+            Guns, Germs, and Steel, The Selfish Gene, Ice Age, and Daroin's Blind Spot.
+            all have a certain theme: a focus on the aforementioned issue of
+            "competitive destruction" and an examination of why some entities are nevertheless
+            able to adapt, survive, and even dominate over time.
+            <br>
+            The preferred Munger business emerges: Some thrive by <em>outcompeting</em>
+            (The Selfslt Gene)
+            and others by <em>outcooperating</em>(Daraini Blind Spot).
+          </div>
+        </Panel>
       </Collapse>
     </div>
 
@@ -204,11 +231,8 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import ViewUI from 'view-design';
-import 'view-design/dist/styles/iview.css';
-
-Vue.use(ViewUI);
+import '../iview';
+import '../style.less';
 
 export default {
   data() {
@@ -249,10 +273,6 @@ export default {
 
 <style lang="less">
 .page-charlie {
-  max-width: 980px;
-  padding: 0 10px;
-  margin: 0 auto;
-
   .indicator {
     padding: 20px 0;
   }
