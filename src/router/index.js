@@ -34,6 +34,11 @@ const routes = [
     name: 'ReadingList',
     component: () => import('../views/charlie/ReadingList.vue'),
   },
+  {
+    path: '/word/list',
+    name: 'WordList',
+    component: () => import('../views/word/list.vue'),
+  },
 ];
 
 const router = new VueRouter({
