@@ -81,6 +81,7 @@ export default {
   created() {
     const priceMap = {};
     const stockCodeList = ['aapl', 'jd', 'tcom',
+      'li',
       'goog',
       'brk$a',
       'msft',

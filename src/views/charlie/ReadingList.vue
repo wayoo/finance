@@ -10,8 +10,9 @@
           <span class="title">{{ item.title }}</span>
           <span> ({{ item.author }}) </span>
           &nbsp;&nbsp;
-          <tag color="success" v-if="item.state === 1">Reading</tag>
-          <tag color="warning" v-if="item.state === 2">Listening</tag>
+          <tag color="green" v-if="item.status === 1">Reading</tag>
+          <tag color="warning" v-if="item.status === 2">Listening</tag>
+          <tag color="success" v-if="item.status === 9">Finish</tag>
         </list-item>
       </list>
     </div>
@@ -30,10 +31,10 @@ export default {
           title: 'Deep Simplicity: Bringing Order to Chaos and Complexity',
           author: 'John Gribbin',
           year: '2005',
-          state: 1,
+          status: 9,
         },
         {
-          title: 'F.I.A.S.C.O.: The Inside Story of a Wall Street Thader',
+          title: 'F.I.A.S.C.O.: The Inside Story of a Wall Street Trader',
           author: 'Frank Partnoy',
           year: '1999',
         },
@@ -76,7 +77,7 @@ export default {
           title: 'Influence: The Psychology of Persuasion',
           author: 'Robert B. Cialdini, George Newbern',
           year: 1998,
-          state: 2,
+          status: 2,
         },
         {
           title: 'The Autobiography of Benjamin Franklin',
@@ -89,9 +90,10 @@ export default {
           year: 1995,
         },
         {
-          title: 'The Seffish Gene',
+          title: 'The Selfish Gene',
           author: 'Richard Dawkins, Lalla Ward',
           year: 1990,
+          status: 1,
         },
         {
           title: 'Titan: The Life of John D. Rockefeller, Sr.',
@@ -155,5 +157,7 @@ export default {
     font-weight: bold;
     padding: 0 10px;
   }
+
+  padding-bottom: 20px;
 }
 </style>
