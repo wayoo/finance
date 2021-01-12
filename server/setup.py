@@ -12,6 +12,8 @@ setup(name='finance',
     version='1.0', 
     packages=find_packages(include=['finance', 'finance.*']),
     install_requires=[
+        'Flask',
+	    'flask_cors',
         'beautifulsoup4',
         'requests',
         'requests_cache',
